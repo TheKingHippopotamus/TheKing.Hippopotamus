@@ -1,37 +1,39 @@
-# Uses repository secret VERCEL = Vercel deployment token (same as VERCEL_TOKEN).
-# Optional: add VERCEL_TEAM_SLUG if not kinghippos-projects.
-name: Deploy to Vercel
+# Secret VERCEL = Vercel token. App lives in Portfolio-Platform/ (monorepo).
+name: Deploy Portfolio to Vercel
 
 on:
   push:
     branches: [main, master]
+    paths:
+      - "Portfolio-Platform/**"
+      - ".github/workflows/deploy-vercel.yml"
   workflow_dispatch:
 
 concurrency:
   group: vercel-deploy-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    working-directory: Portfolio-Platform
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: Portfolio-Platform/package-lock.json
 
-      - name: Install
-        run: npm ci
+      - run: npm ci
 
       - name: Deploy production
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL }}
-          # Override via GitHub secret if your team slug differs
           VERCEL_TEAM_SLUG: ${{ secrets.VERCEL_TEAM_SLUG }}
         run: |
           set -e

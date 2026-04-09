@@ -28,7 +28,7 @@ In the GitHub repo: **Settings → Secrets and variables → Actions**, add:
 
 Optional: **`VERCEL_TEAM_SLUG`** — defaults to `kinghippos-projects` if unset.
 
-Pushes to **`main`** or **`master`** run [`.github/workflows/deploy-vercel.yml`](.github/workflows/deploy-vercel.yml).
+Pushes to **`main`** (monorepo root) run [`.github/workflows/deploy-vercel.yml`](../.github/workflows/deploy-vercel.yml) with **`working-directory: Portfolio-Platform`**. On Vercel, set **Root Directory** to **`Portfolio-Platform`**.
 
 ### CLI (local)
 
