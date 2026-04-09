@@ -25,6 +25,3 @@ pnpm-debug.log*
 
 # Vercel
 .vercel
-
-# Next.js portfolio is its own git repo (separate remote from this parent)
-Portfolio-Platform/

@@ -1,3 +1,7 @@
 # TheKing.Hippopotamus
 
-Monorepo root. The Next.js portfolio app lives in **`Portfolio-Platform/`** (separate git history / remote).
+Monorepo: the Next.js portfolio / command center lives in **`Portfolio-Platform/`**.
+
+```bash
+cd Portfolio-Platform && npm install && npm run dev
+```
