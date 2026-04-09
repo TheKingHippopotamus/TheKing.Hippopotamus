@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { AppShell } from "@/components/layout/AppShell";
+import { getSiteUrl } from "@/lib/site-url";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,9 +21,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://localhost:3000",
-  ),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "King Hippopotamus — Command Center",
     template: "%s · King Hippopotamus",

@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
 import { STATIONS } from "@/lib/stations";
 import { PROJECTS } from "@/lib/projects";
+import { getSiteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://localhost:3000";
-  const root = base.replace(/\/$/, "");
+  const root = getSiteUrl();
 
   const stationUrls = STATIONS.map((s) => ({
     url: `${root}/station/${s.slug}`,
