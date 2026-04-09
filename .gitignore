@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment and secrets (never commit)
+.env
+.env.*
+!.env.example
+.cursor/.env
+
+# Next.js / build outputs
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vercel
+.vercel
+
+# Next.js portfolio is its own git repo (separate remote from this parent)
+Portfolio-Platform/
