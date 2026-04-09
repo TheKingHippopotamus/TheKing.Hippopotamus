@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Push the parent repo (TheKingHippopotamus) to GitHub.
-# Portfolio-Platform/ is gitignored here — push it from inside that folder separately.
+# Push monorepo TheKing.Hippopotamus to GitHub (includes Portfolio-Platform/).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"

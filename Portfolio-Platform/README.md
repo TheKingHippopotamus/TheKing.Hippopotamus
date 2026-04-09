@@ -1,8 +1,12 @@
-# King Hippopotamus — Portfolio Command Center
+# King Hippopotamus — Command Center (Next.js)
 
-Next.js (App Router) **BFF** on **Vercel**: a live operations surface for stations (financial, agents, dev-tools, infra, labs) with embedded tools, GitHub-backed activity, and optional project API proxies.
+חלק מהמונורפו **[TheKing.Hippopotamus](https://github.com/TheKingHippopotamus/TheKing.Hippopotamus)** — לא ריפו נפרד.
+
+Next.js (App Router) **BFF** על **Vercel**: משטח פעולה לסטיישנים (פיננסים, סוכנים, dev-tools, infra, labs), embeds, BFF ל-GitHub, ופרוקסי לפרויקטים.
 
 ## Develop
+
+מהשורש של המונורפו:
 
 ```bash
 cd Portfolio-Platform

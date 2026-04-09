@@ -1,5 +1,6 @@
-# Secret VERCEL = Vercel token. App lives in Portfolio-Platform/ (monorepo).
-name: Deploy Portfolio to Vercel
+# Repo: TheKing.Hippopotamus — deploy Next app from Portfolio-Platform/
+# Secret VERCEL = Vercel deployment token.
+name: Deploy TheKing.Hippopotamus (Vercel)
 
 on:
   push:
